@@ -5,8 +5,8 @@ import '../stylesheets/Testimonio.css';
   var boldText = '';
   var finalText = '';
   var textoNegritaShawn = 'freeCodeCamp cambió mi vida.';
-  var textoNegritaSarah = 'freeCodeCamp fue la puerta de entrada a mi carrera.';
-  var textoNegritaEmma = 'freeCodeCamp me dio las habilidades.';
+  var textoNegritaSarah = 'freeCodeCamp fue la puerta de entrada a mi carrera';
+  var textoNegritaEmma = 'freeCodeCamp me dio las habilidades';
 
 function Testimonio(props) {
   
@@ -50,12 +50,14 @@ function Testimonio(props) {
   );
 }
 
-function SplitText(textoNegrita, texto){
-  let startIndex = texto.indexOf(textoNegrita);
+function SplitText(textoNegrita, text){
+  let startIndex = text.indexOf(textoNegrita);
 
-  initText = texto.substring(0, startIndex);
-  boldText = texto.substring(startIndex, startIndex + textoNegrita.length);
-  finalText = texto.substring(startIndex + textoNegrita.length, texto.length);
+  console.log(startIndex);
+
+  initText = text.substring(0, startIndex);
+  boldText = text.substring(startIndex, startIndex + textoNegrita.length);
+  finalText = text.substring(startIndex + textoNegrita.length, text.length);
 }
 
 export default Testimonio;
